@@ -30,7 +30,6 @@ public class PlayerCharacter {
     }
     public fileprivate(set) var classification: Classification
     public fileprivate(set) var experience: Int
-    public fileprivate(set) var isFighting: Bool
     public fileprivate(set) var isEvil: Bool
     public fileprivate(set) var boggart: String
     public fileprivate(set) var patronus: String
@@ -59,11 +58,25 @@ public class PlayerCharacter {
             return 105 + (self.level * 2)
         }
     }
+    public var isFighting: Bool {
+        if currentHealth == 0 || currentMagic == 0{
+            return false
+        } else {
+            return true
+        }
+    }
+    public var isAlive: Bool {
+        if currentHealth == 0 {
+            return false
+        } else {
+            return true
+        }
+        
+    }
     
     public init(name: String, experience: Int, classification: Classification, isEvil: Bool, boggart: String, patronus: String, wandWood: String){
         self.name = name
         self.experience = experience
-        self.isFighting = true
         self.classification = classification
         self.isEvil = isEvil
         self.boggart = boggart

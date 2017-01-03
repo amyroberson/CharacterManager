@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EtW-aO-3zA">
-                                <rect key="frame" x="107.5" y="145.5" width="160.5" height="356"/>
+                                <rect key="frame" x="112.5" y="130.5" width="160.5" height="386.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgc-Ng-aWL">
                                         <rect key="frame" x="0.0" y="0.0" width="160.5" height="20.5"/>
@@ -91,8 +91,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsAlive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii1-rD-9zI">
+                                        <rect key="frame" x="55.5" y="335.5" width="49.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsEvil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ku4-A3-tr7">
-                                        <rect key="frame" x="61" y="335.5" width="39" height="20.5"/>
+                                        <rect key="frame" x="61" y="366" width="39" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -100,24 +106,56 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-pX-MSt">
-                                <rect key="frame" x="320" y="579" width="31" height="30"/>
-                                <state key="normal" title="Hurt">
+                                <rect key="frame" x="254" y="579" width="97" height="30"/>
+                                <state key="normal" title="Hurt 10 Points">
                                     <color key="titleColor" red="1" green="0.062298209338693344" blue="0.14826477778467295" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="hurt10Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHC-Yc-3bh"/>
+                                    <action selector="hurt1Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xp-gF-ncj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-FS-2Da">
-                                <rect key="frame" x="10" y="617" width="59" height="30"/>
+                                <rect key="frame" x="16" y="617" width="59" height="30"/>
                                 <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="preiviousTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LRN-8K-4Hf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-vg-DMl">
                                 <rect key="frame" x="319" y="617" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdc-lz-Ixl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRZ-yx-zXW">
-                                <rect key="frame" x="16" y="579" width="31" height="30"/>
-                                <state key="normal" title="Heal">
+                                <rect key="frame" x="16" y="579" width="98" height="30"/>
+                                <state key="normal" title="Heal 10 Points">
                                     <color key="titleColor" red="0.069276933860000001" green="0.43884980369999999" blue="0.022480829809999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="heal10Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMB-Ln-ba6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bV-Zx-Z9X">
+                                <rect key="frame" x="16" y="541" width="81" height="30"/>
+                                <state key="normal" title="Heal 1 Point">
+                                    <color key="titleColor" red="0.069276933860000001" green="0.43884980369999999" blue="0.022480829809999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="heal1Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8s-cd-qZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ie-xW-eAk">
+                                <rect key="frame" x="270" y="541" width="81" height="30"/>
+                                <state key="normal" title="Hurt 1 Point">
+                                    <color key="titleColor" red="1" green="0.062298209340000001" blue="0.1482647778" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hurt10Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="63M-hS-Jig"/>
+                                    <action selector="hurt1Tapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0jL-HU-3aR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -126,12 +164,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gxL-vg-DMl" secondAttribute="trailing" constant="8" id="406-Pv-oWa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nqb-FS-2Da" secondAttribute="bottom" constant="20" id="53B-3d-LeT"/>
                             <constraint firstItem="EtW-aO-3zA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="5F0-PF-HaK"/>
-                            <constraint firstItem="nqb-FS-2Da" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="9mL-y5-P1F"/>
-                            <constraint firstItem="EtW-aO-3zA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kwq-gB-kky"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ie-xW-eAk" secondAttribute="trailing" constant="8" id="7fo-G8-rGM"/>
+                            <constraint firstItem="nqb-FS-2Da" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9mL-y5-P1F"/>
+                            <constraint firstItem="VRZ-yx-zXW" firstAttribute="top" secondItem="3bV-Zx-Z9X" secondAttribute="bottom" constant="8" symbolic="YES" id="FDY-uY-aAf"/>
+                            <constraint firstItem="EtW-aO-3zA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5" id="Kwq-gB-kky"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gxL-vg-DMl" secondAttribute="bottom" constant="20" id="Nct-Oz-vSW"/>
                             <constraint firstItem="nqb-FS-2Da" firstAttribute="top" secondItem="VRZ-yx-zXW" secondAttribute="bottom" constant="8" symbolic="YES" id="WIs-9a-MvC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="VRZ-yx-zXW" secondAttribute="leading" id="beA-oQ-O5h"/>
                             <constraint firstItem="gxL-vg-DMl" firstAttribute="top" secondItem="kGE-pX-MSt" secondAttribute="bottom" constant="8" symbolic="YES" id="cBz-qb-BzR"/>
+                            <constraint firstItem="3bV-Zx-Z9X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nmu-NU-U5S"/>
+                            <constraint firstItem="kGE-pX-MSt" firstAttribute="top" secondItem="9Ie-xW-eAk" secondAttribute="bottom" constant="8" symbolic="YES" id="veM-yE-gVe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -140,6 +182,7 @@
                         <outlet property="classificationLabel" destination="Zyz-Fp-0O8" id="fh6-gl-A2m"/>
                         <outlet property="currentHealthLabel" destination="sIR-g4-dBi" id="cDz-dv-cov"/>
                         <outlet property="currentMagicLabel" destination="ShM-os-zAk" id="Lkj-Ww-shJ"/>
+                        <outlet property="isAliveLabel" destination="Ii1-rD-9zI" id="1gZ-6H-WNd"/>
                         <outlet property="isEvilLabel" destination="Ku4-A3-tr7" id="aLd-Ia-PwN"/>
                         <outlet property="isFightingLabel" destination="MvJ-N3-b5T" id="F5y-bz-Qtv"/>
                         <outlet property="maxHealthLabel" destination="2pl-8R-J1Y" id="wQm-UJ-kps"/>
