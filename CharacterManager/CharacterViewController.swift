@@ -9,11 +9,8 @@
 import UIKit
 
 class CharacterViewController: UIViewController {
-    let hermione = PlayerCharacter(name: "Hermione Granger", experience: 20, classification: .student, isEvil: false, boggart: "Failure", patronus: "Otter", wandWood: "Vine Wood")
-    let minerva = PlayerCharacter(name: "Minerva McGonagall", experience: 50, classification: .orderOfThePhoenix, isEvil: false, boggart: "Voldemort", patronus: "Cat", wandWood: "Fir")
-    let lucius = PlayerCharacter(name: "Lucius Malfoy", experience: 30, classification: .deathEater, isEvil: true, boggart: "Voldemort", patronus: "none", wandWood: "Elm")
     var currentCharacter: PlayerCharacter
-    let characters: [PlayerCharacter]
+    var characters: [PlayerCharacter]
     var index: Int
     
     @IBOutlet var nameLabel: UILabel!
@@ -32,13 +29,16 @@ class CharacterViewController: UIViewController {
 
     
     required init(coder aDecoder: NSCoder) {
-        characters = [hermione, minerva, lucius]
+        let info = GetCharacters()
+        self.characters = info.characters
         index = 0
-        currentCharacter = characters[index]
+        currentCharacter = self.characters[index]
         super.init(coder: aDecoder)!
     }
     
-   
+    
+    
+    
     @IBAction func hurt1Tapped() {
         currentCharacter.takeDamage(1)
         refreshView()
@@ -114,7 +114,8 @@ class CharacterViewController: UIViewController {
         super.viewWillAppear(animated)
         refreshView()
     }
-
+    
+    
 
 }
 

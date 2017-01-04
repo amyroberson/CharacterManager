@@ -82,11 +82,24 @@ public class PlayerCharacter {
         self.boggart = boggart
         self.patronus = patronus
         self.wandWood = wandWood
+        self.currentMagic = 100
         self.currentHealth = 100
-        self.currentMagic = 100 // wont let me use max magic find a solution later
     }
     
-    //from JSON Data!!!
+     init?(dictionary: [String: Any]) {
+        self.name = dictionary["name"] as? String ?? ""
+        self.currentHealth = dictionary["currentHealth"] as? Int ?? 0
+        self.currentMagic = dictionary["currentMagic"] as? Int ?? 0
+        guard let classificationText = dictionary["classification"] as? String else { return nil }
+        guard let classification = Classification(rawValue: classificationText) else { return nil }
+        self.classification = classification
+        self.experience = dictionary["experience"] as? Int ?? 0
+        self.isEvil = dictionary["isEvil"] as? Bool ?? false
+        self.boggart = dictionary["boggart"] as? String ?? ""
+        self.patronus = dictionary["patronus"] as? String ?? ""
+        self.wandWood = dictionary["wandWood"] as? String ?? ""
+    }
+    
     
     public func takeDamage(_ n: Int){
        self.currentHealth -= n
@@ -98,7 +111,28 @@ public class PlayerCharacter {
     
     
     func toDictionary() -> [String: Any]{
-        var dictionary: [String: Any] = [:]
+        let dictionary: [String: Any] = [
+            "name" : self.name,
+            "currentHealth" : self.currentHealth,
+            "currentMagic" : self.currentMagic,
+            "classification" : self.classification.description,
+            "experience" : self.experience,
+            "isEvil" : self.isEvil,
+            "boggart" : self.boggart,
+            "patronus" : self.patronus,
+            "wandWood" : self.wandWood,
+            "level" : self.level,
+            "maxMagic" : self.maxMagic,
+            "maxHealth" : self.maxHealth,
+            "isFighting" : self.isFighting,
+            "isAlive": self.isAlive,
+        ]
+        
         return dictionary
+    }
+    
+    func toJson() throws -> Data {
+        let jsonRepresentation = try JSONSerialization.data(withJSONObject: self.toDictionary(), options: [])
+        return jsonRepresentation
     }
 }

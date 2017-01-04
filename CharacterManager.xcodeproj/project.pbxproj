@@ -18,6 +18,8 @@
 		E14E3BAD1E1C306500376B91 /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E3BAC1E1C306500376B91 /* Classification.swift */; };
 		E14E3BAF1E1C47B200376B91 /* ClassificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E3BAE1E1C47B200376B91 /* ClassificationTests.swift */; };
 		E14E3BB11E1C48A900376B91 /* PlayerCharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E3BB01E1C48A900376B91 /* PlayerCharacterTests.swift */; };
+		E14E3BB31E1C7E8C00376B91 /* GetCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E3BB21E1C7E8C00376B91 /* GetCharactersTests.swift */; };
+		E14E3BB51E1C835100376B91 /* GetCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14E3BB41E1C835100376B91 /* GetCharacters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E14E3BAC1E1C306500376B91 /* Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
 		E14E3BAE1E1C47B200376B91 /* ClassificationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationTests.swift; sourceTree = "<group>"; };
 		E14E3BB01E1C48A900376B91 /* PlayerCharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCharacterTests.swift; sourceTree = "<group>"; };
+		E14E3BB21E1C7E8C00376B91 /* GetCharactersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharactersTests.swift; sourceTree = "<group>"; };
+		E14E3BB41E1C835100376B91 /* GetCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharacters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				E14E3B7E1E1C2D7D00376B91 /* CharacterViewController.swift */,
 				E14E3BAC1E1C306500376B91 /* Classification.swift */,
 				E14E3BAA1E1C2DF100376B91 /* PlayerCharacter.swift */,
+				E14E3BB41E1C835100376B91 /* GetCharacters.swift */,
 				E14E3B801E1C2D7D00376B91 /* Main.storyboard */,
 				E14E3B831E1C2D7D00376B91 /* Assets.xcassets */,
 				E14E3B851E1C2D7D00376B91 /* LaunchScreen.storyboard */,
@@ -122,6 +127,7 @@
 			children = (
 				E14E3B911E1C2D7D00376B91 /* CharacterManagerTests.swift */,
 				E14E3B931E1C2D7D00376B91 /* Info.plist */,
+				E14E3BB21E1C7E8C00376B91 /* GetCharactersTests.swift */,
 				E14E3BB01E1C48A900376B91 /* PlayerCharacterTests.swift */,
 				E14E3BAE1E1C47B200376B91 /* ClassificationTests.swift */,
 			);
@@ -276,6 +282,7 @@
 			files = (
 				E14E3BAB1E1C2DF100376B91 /* PlayerCharacter.swift in Sources */,
 				E14E3B7F1E1C2D7D00376B91 /* CharacterViewController.swift in Sources */,
+				E14E3BB51E1C835100376B91 /* GetCharacters.swift in Sources */,
 				E14E3B7D1E1C2D7D00376B91 /* AppDelegate.swift in Sources */,
 				E14E3BAD1E1C306500376B91 /* Classification.swift in Sources */,
 			);
@@ -285,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14E3BB31E1C7E8C00376B91 /* GetCharactersTests.swift in Sources */,
 				E14E3BB11E1C48A900376B91 /* PlayerCharacterTests.swift in Sources */,
 				E14E3B921E1C2D7D00376B91 /* CharacterManagerTests.swift in Sources */,
 				E14E3BAF1E1C47B200376B91 /* ClassificationTests.swift in Sources */,
