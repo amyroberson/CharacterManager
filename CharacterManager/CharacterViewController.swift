@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CharacterViewController: UIViewController {
-    var currentCharacter: PlayerCharacter
-    var characters: [PlayerCharacter]
-    var index: Int
+public class CharacterViewController: UIViewController {
+   public var currentCharacter: PlayerCharacter
+   public var characters: [PlayerCharacter]
+   public var index: Int
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var currentHealthLabel: UILabel!
@@ -28,7 +28,7 @@ class CharacterViewController: UIViewController {
     @IBOutlet var isEvilLabel: UILabel!
 
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         let info = GetCharacters()
         self.characters = info.characters
         index = 0
@@ -59,7 +59,7 @@ class CharacterViewController: UIViewController {
    
     @IBAction func preiviousTapped() {
         index -= 1
-        if index < 0{
+        if index < 0 {
             index = characters.count - 1
         }
         currentCharacter = characters[index]
@@ -75,7 +75,7 @@ class CharacterViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
     }
     func refreshView(){
@@ -110,7 +110,7 @@ class CharacterViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshView()
     }
